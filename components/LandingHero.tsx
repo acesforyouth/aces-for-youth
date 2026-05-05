@@ -1,0 +1,141 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
+const FORM_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSdAwDb3wE_5h-aVWKEGVd5RI61hHjp3U5zNGBimkxY5KsoAcw/viewform';
+
+const details = [
+  { label: 'Date', value: 'Late May 2025 — TBD' },
+  { label: 'Location', value: 'TBD' },
+  { label: 'Format', value: 'Round Robin Singles' },
+  { label: 'Entry Fee', value: '$15' },
+  { label: 'Players', value: '8 players' },
+  { label: 'Courts', value: '4 courts' },
+];
+
+export default function LandingHero() {
+  return (
+    <section
+      id="home"
+      className="min-h-screen bg-[#2D6A4F] relative overflow-hidden flex items-center"
+    >
+      {/* Diagonal stripe */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: `repeating-linear-gradient(
+            -45deg,
+            transparent 0px,
+            transparent 24px,
+            rgba(255,255,255,0.03) 24px,
+            rgba(255,255,255,0.03) 25px
+          )`,
+        }}
+      />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-28 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+
+          {/* LEFT — Program Overview */}
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="mb-6"
+            >
+              <span className="inline-flex items-center gap-2 bg-[#F4A623] text-white text-sm font-dm font-semibold px-4 py-2 rounded-full">
+                <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
+                Raising funds for Aceing Autism
+              </span>
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="font-bebas text-white leading-none tracking-wide mb-5"
+              style={{ fontSize: 'clamp(3.5rem, 9vw, 7rem)' }}
+            >
+              ACES FOR YOUTH
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="font-dm text-white/75 text-lg leading-relaxed mb-4"
+            >
+              A youth tennis tournament series for kids ages 8–12, giving players
+              their first real competitive experience while raising funds for Aceing Autism.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.28 }}
+              className="font-dm text-white/50 text-sm"
+            >
+              Round robin singles · $15 entry · All proceeds donated to charity
+            </motion.p>
+          </div>
+
+          {/* RIGHT — Tournament Details + Registration */}
+          <div className="flex flex-col gap-4">
+            {/* Tournament Details */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6"
+            >
+              <div className="flex items-center justify-between mb-5">
+                <h2 className="font-bebas text-2xl text-white tracking-wide">
+                  Tournament Details
+                </h2>
+                <span className="bg-[#F4A623] text-white font-dm font-bold text-xs px-3 py-1 rounded-full tracking-widest">
+                  PILOT
+                </span>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                {details.map(({ label, value }) => (
+                  <div key={label}>
+                    <p className="font-dm text-white/45 text-xs uppercase tracking-widest mb-0.5">
+                      {label}
+                    </p>
+                    <p className="font-dm text-white text-sm font-medium">{value}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Registration */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.33 }}
+              className="bg-white rounded-2xl p-6"
+            >
+              <h2 className="font-bebas text-2xl text-[#2D6A4F] tracking-wide mb-2">
+                Registration Process
+              </h2>
+              <p className="font-dm text-gray-500 text-sm leading-relaxed mb-5">
+                Fill out the form below with your name, age, and skill level. The $15 entry
+                fee is due at check-in on the day of the tournament.
+              </p>
+              <a
+                href={FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full bg-[#F4A623] text-white font-dm font-bold text-center py-3.5 rounded-xl hover:bg-[#e09510] transition-colors duration-200"
+              >
+                Register Now →
+              </a>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
