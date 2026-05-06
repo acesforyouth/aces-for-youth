@@ -19,7 +19,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: 'Aces for Youth | Youth Tennis Tournament Series',
   description:
-    'Competitive tennis tournaments for kids ages 8–12, raising money for Aceing Autism. Join us for Round Robin singles play and give back to the community.',
+    'Competitive tennis tournaments for kids ages 8–10, raising money for Aceing Autism. Join us for Round Robin singles play and give back to the community.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

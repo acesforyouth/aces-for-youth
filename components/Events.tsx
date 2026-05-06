@@ -6,10 +6,10 @@ import { useToast } from './Toast';
 const events = [
   {
     title: 'Pilot Tournament',
-    date: 'Late May 2025 — Date TBD',
+    date: 'June 6, 2025 — Saturday',
     location: 'Location TBD',
     format: 'Round Robin Singles',
-    players: 8,
+    players: 16,
     courts: 4,
     fee: '$15',
     isPilot: true,

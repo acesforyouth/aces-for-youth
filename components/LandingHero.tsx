@@ -6,11 +6,11 @@ const FORM_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLSdAwDb3wE_5h-aVWKEGVd5RI61hHjp3U5zNGBimkxY5KsoAcw/viewform';
 
 const details = [
-  { label: 'Date', value: 'Late May 2025 — TBD' },
+  { label: 'Date', value: 'June 6, 2025 — Saturday' },
   { label: 'Location', value: 'TBD' },
   { label: 'Format', value: 'Round Robin Singles' },
   { label: 'Entry Fee', value: '$15' },
-  { label: 'Players', value: '8 players' },
+  { label: 'Players', value: '16 players' },
   { label: 'Courts', value: '4 courts' },
 ];
 
@@ -67,7 +67,7 @@ export default function LandingHero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="font-dm text-white/75 text-lg leading-relaxed mb-4"
             >
-              A youth tennis tournament series for kids ages 8–12, giving players
+              A youth tennis tournament series for kids ages 8–10, giving players
               their first real competitive experience while raising funds for Aceing Autism.
             </motion.p>
 
