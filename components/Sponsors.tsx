@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Sponsors() {
   return (
@@ -22,12 +23,66 @@ export default function Sponsors() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="border-2 border-dashed border-gray-200 rounded-2xl p-16 text-center"
+          className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm"
         >
-          <p className="font-bebas text-4xl text-gray-300 tracking-wide mb-3">COMING SOON</p>
-          <p className="font-dm text-gray-400 text-base">
-            Interested in sponsoring Aces for Youth? Reach out via the contact section below.
-          </p>
+          {/* Header */}
+          <div className="bg-[#2D6A4F] px-8 py-5 flex items-center justify-between">
+            <span className="font-dm text-white/70 text-xs uppercase tracking-widest font-semibold">
+              Court Sponsor
+            </span>
+            <span className="bg-[#F4A623] text-white font-dm font-bold text-xs px-3 py-1 rounded-full tracking-widest">
+              PRESENTING
+            </span>
+          </div>
+
+          {/* Body */}
+          <div className="px-8 py-8">
+            <div className="mb-5">
+              <Image
+                src="https://www.lifetimeactivities.com/wp-content/themes/customizr-child/assets/front/img/lta-logo-3.svg"
+                alt="Lifetime Activities"
+                width={220}
+                height={60}
+                className="object-contain"
+                unoptimized
+              />
+            </div>
+            <p className="font-dm text-[#2D6A4F] font-semibold text-sm mb-5">
+              Santa Clara Tennis Center
+            </p>
+
+            <p className="font-dm text-gray-600 text-base leading-relaxed mb-6">
+              Lifetime Activities – Santa Clara has generously sponsored our courts for the Aces
+              for Youth tournament. With over 30 years of experience and more than 15,000 students
+              served, they are one of the premier tennis programs in the Bay Area — offering
+              lessons, camps, and competition training for all ages and abilities.
+            </p>
+
+            {/* Details row */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              <div className="bg-[#FAF9F6] rounded-xl p-4">
+                <p className="font-dm text-gray-400 text-xs uppercase tracking-widest mb-1">Location</p>
+                <p className="font-dm text-[#1a1a1a] text-sm font-medium leading-snug">
+                  2625 Hayward Dr<br />Santa Clara, CA 95051
+                </p>
+              </div>
+              <div className="bg-[#FAF9F6] rounded-xl p-4">
+                <p className="font-dm text-gray-400 text-xs uppercase tracking-widest mb-1">Facility</p>
+                <p className="font-dm text-[#1a1a1a] text-sm font-medium leading-snug">
+                  8 tennis courts<br />On-site tennis pro shop
+                </p>
+              </div>
+            </div>
+
+            <a
+              href="https://www.lifetimeactivities.com/santa-clara/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-dm font-semibold text-sm text-[#2D6A4F] hover:text-[#F4A623] transition-colors duration-200"
+            >
+              Visit Lifetime Activities →
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

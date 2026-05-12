@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 const FORM_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLSdAwDb3wE_5h-aVWKEGVd5RI61hHjp3U5zNGBimkxY5KsoAcw/viewform';
@@ -32,13 +33,19 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <a
-            href="#home"
-            className={`font-bebas text-2xl tracking-widest transition-colors duration-300 ${
+          <a href="#home" className="flex items-center gap-3">
+            <Image
+              src="/logo-new.png"
+              alt="Aces for Youth"
+              width={44}
+              height={44}
+              className="object-contain mix-blend-multiply"
+            />
+            <span className={`font-bebas text-xl tracking-widest transition-colors duration-300 ${
               scrolled ? 'text-[#2D6A4F]' : 'text-white'
-            }`}
-          >
-            ACES FOR YOUTH
+            }`}>
+              ACES FOR YOUTH
+            </span>
           </a>
 
           <div className="hidden md:flex items-center gap-8">

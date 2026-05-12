@@ -1,15 +1,16 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const FORM_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLSdAwDb3wE_5h-aVWKEGVd5RI61hHjp3U5zNGBimkxY5KsoAcw/viewform';
 
 const details = [
   { label: 'Date', value: 'June 6, 2025 — Saturday' },
-  { label: 'Location', value: 'TBD' },
+  { label: 'Location', value: 'Lifetime Activities Santa Clara, 2625 Hayward Dr' },
   { label: 'Format', value: 'Round Robin Singles' },
-  { label: 'Entry Fee', value: '$15' },
+  { label: 'Entry Fee', value: '$20' },
   { label: 'Players', value: '16 players' },
   { label: 'Courts', value: '4 courts' },
 ];
@@ -77,51 +78,24 @@ export default function LandingHero() {
               transition={{ duration: 0.6, delay: 0.28 }}
               className="font-dm text-white/50 text-sm"
             >
-              Round robin singles · $15 entry · All proceeds donated to charity
+              Round robin singles · $20 entry · All proceeds donated to charity
             </motion.p>
           </div>
 
-          {/* RIGHT — Tournament Details + Registration */}
+          {/* RIGHT — Registration + Tournament Details */}
           <div className="flex flex-col gap-4">
-            {/* Tournament Details */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6"
-            >
-              <div className="flex items-center justify-between mb-5">
-                <h2 className="font-bebas text-2xl text-white tracking-wide">
-                  Tournament Details
-                </h2>
-                <span className="bg-[#F4A623] text-white font-dm font-bold text-xs px-3 py-1 rounded-full tracking-widest">
-                  PILOT
-                </span>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                {details.map(({ label, value }) => (
-                  <div key={label}>
-                    <p className="font-dm text-white/45 text-xs uppercase tracking-widest mb-0.5">
-                      {label}
-                    </p>
-                    <p className="font-dm text-white text-sm font-medium">{value}</p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
             {/* Registration */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.33 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-white rounded-2xl p-6"
             >
               <h2 className="font-bebas text-2xl text-[#2D6A4F] tracking-wide mb-2">
                 Registration Process
               </h2>
               <p className="font-dm text-gray-500 text-sm leading-relaxed mb-5">
-                Fill out the form below with your name, age, and skill level. The $15 entry
+                Fill out the form below with your name, age, and skill level. The $20 entry
                 fee is due at check-in on the day of the tournament.
               </p>
               <a
@@ -132,6 +106,42 @@ export default function LandingHero() {
               >
                 Register Now →
               </a>
+            </motion.div>
+
+            {/* Tournament Details */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.33 }}
+              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6"
+            >
+              <div className="flex items-center justify-between mb-5">
+                <h2 className="font-bebas text-2xl text-white tracking-wide">
+                  Tournament Details
+                </h2>
+                <span className="bg-[#F4A623] text-white font-dm font-bold text-xs px-3 py-1 rounded-full tracking-widest">
+                  PILOT
+                </span>
+              </div>
+              <div className="grid grid-cols-2 gap-4 mb-5">
+                {details.map(({ label, value }) => (
+                  <div key={label}>
+                    <p className="font-dm text-white/45 text-xs uppercase tracking-widest mb-0.5">
+                      {label}
+                    </p>
+                    <p className="font-dm text-white text-sm font-medium">{value}</p>
+                  </div>
+                ))}
+              </div>
+              <Link
+                href="/bracket"
+                className="flex items-center justify-center gap-2 w-full border border-white/30 text-white font-dm font-semibold text-sm py-2.5 rounded-xl hover:bg-white/10 transition-colors duration-200"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 10h18M3 14h18M10 3v18M14 3v18" />
+                </svg>
+                View Bracket
+              </Link>
             </motion.div>
           </div>
         </div>

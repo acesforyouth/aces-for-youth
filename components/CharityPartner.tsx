@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function CharityPartner() {
   return (
@@ -34,9 +35,16 @@ export default function CharityPartner() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="bg-white/10 border border-white/20 rounded-2xl p-8"
         >
-          <h3 className="font-bebas text-3xl text-[#F4A623] tracking-wide mb-4">
-            Aceing Autism
-          </h3>
+          <div className="mb-5">
+            <Image
+              src="/aceing-autism.png"
+              alt="Aceing Autism"
+              width={160}
+              height={160}
+              className="object-contain"
+              unoptimized
+            />
+          </div>
           <p className="font-dm text-white/75 text-lg leading-relaxed mb-4">
             Aceing Autism is a nonprofit organization that uses tennis to improve the lives of
             children with autism spectrum disorder. Through programs specifically designed for
