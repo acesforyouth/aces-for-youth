@@ -10,9 +10,9 @@ const MATCHUP_PAIRS: [number, number][] = [[0, 1], [0, 2], [1, 2]];
 
 type Score = { a: string; b: string };
 const emptyScore = (): Score => ({ a: '', b: '' });
-const emptyGroups = (): string[][] => Array(6).fill(null).map(() => ['', '', '']);
+const emptyGroups = (): string[][] => Array.from({ length: 6 }, () => ['', '', '']);
 const emptyScores = (): Score[][][] =>
-  Array(6).fill(null).map(() => MATCHUP_PAIRS.map(() => emptyScore()));
+  Array.from({ length: 6 }, () => Array.from({ length: MATCHUP_PAIRS.length }, () => emptyScore()));
 
 export default function BracketPage() {
   const [isAdmin, setIsAdmin] = useState(false);
