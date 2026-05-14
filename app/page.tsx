@@ -13,9 +13,9 @@ export default function Home() {
       <Navbar />
       <LandingHero />
       <Donations />
-      <AboutUs />
-      <CharityPartner />
       <Sponsors />
+      <CharityPartner />
+      <AboutUs />
       <Contact />
       <Footer />
     </main>

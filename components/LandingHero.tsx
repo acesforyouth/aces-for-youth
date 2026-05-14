@@ -2,19 +2,18 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const FORM_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLSdAwDb3wE_5h-aVWKEGVd5RI61hHjp3U5zNGBimkxY5KsoAcw/viewform';
 
 const details = [
   { label: 'Date', value: 'June 6, 2025 — Saturday' },
-  { label: 'Location', value: 'Lifetime Activities Santa Clara, 2625 Hayward Dr' },
   { label: 'Format', value: 'Round Robin Singles' },
   { label: 'Entry Fee', value: '$20' },
   { label: 'Players', value: '18 competitors' },
   { label: 'Matches', value: '2 per player' },
   { label: 'Games Per Match', value: '6-game set' },
-  { label: 'Courts', value: '4 courts' },
 ];
 
 export default function LandingHero() {
@@ -91,12 +90,12 @@ export default function LandingHero() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white rounded-2xl p-6"
+              className="bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl p-6"
             >
-              <h2 className="font-bebas text-2xl text-[#2D6A4F] tracking-wide mb-2">
+              <h2 className="font-bebas text-2xl text-white tracking-wide mb-2">
                 Registration Process
               </h2>
-              <p className="font-dm text-gray-500 text-sm leading-relaxed mb-5">
+              <p className="font-dm text-white/70 text-sm leading-relaxed mb-5">
                 Fill out the form with your name, age, and skill level. Every player is
                 guaranteed 2 full matches — 6-game sets against real competition. The $20
                 entry fee is due at check-in.
@@ -111,12 +110,47 @@ export default function LandingHero() {
               </a>
             </motion.div>
 
+            {/* Lifetime Activities Sponsor */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.27 }}
+              className="bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl p-5"
+            >
+              <div className="flex items-center justify-between mb-3">
+                <div>
+                  <p className="font-dm text-white/45 text-[10px] uppercase tracking-widest mb-1">Sponsor</p>
+                  <Image
+                    src="https://www.lifetimeactivities.com/wp-content/themes/customizr-child/assets/front/img/lta-logo-3.svg"
+                    alt="Lifetime Activities"
+                    width={140}
+                    height={38}
+                    className="object-contain"
+                    unoptimized
+                  />
+                </div>
+                <span className="bg-[#F4A623]/20 text-[#F4A623] font-dm font-bold text-[10px] px-2.5 py-1 rounded-full tracking-widest border border-[#F4A623]/30 self-start">
+                  SPONSOR
+                </span>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <p className="font-dm text-white/45 text-[10px] uppercase tracking-widest mb-0.5">Courts</p>
+                  <p className="font-dm text-white text-sm font-medium">4 courts provided</p>
+                </div>
+                <div>
+                  <p className="font-dm text-white/45 text-[10px] uppercase tracking-widest mb-0.5">Location</p>
+                  <p className="font-dm text-white text-sm font-medium">2625 Hayward Dr, Santa Clara</p>
+                </div>
+              </div>
+            </motion.div>
+
             {/* Tournament Details */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.33 }}
-              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6"
+              className="bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl p-6"
             >
               <div className="flex items-center justify-between mb-5">
                 <h2 className="font-bebas text-2xl text-white tracking-wide">
