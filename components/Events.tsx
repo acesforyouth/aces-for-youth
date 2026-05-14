@@ -9,7 +9,7 @@ const events = [
     date: 'June 6, 2025 — Saturday',
     location: 'Location TBD',
     format: 'Round Robin Singles',
-    players: 16,
+    players: 18,
     courts: 4,
     fee: '$20',
     isPilot: true,

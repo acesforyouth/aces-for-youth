@@ -11,7 +11,9 @@ const details = [
   { label: 'Location', value: 'Lifetime Activities Santa Clara, 2625 Hayward Dr' },
   { label: 'Format', value: 'Round Robin Singles' },
   { label: 'Entry Fee', value: '$20' },
-  { label: 'Players', value: '16 players' },
+  { label: 'Players', value: '18 competitors' },
+  { label: 'Matches', value: '2 per player' },
+  { label: 'Games Per Match', value: '6-game set' },
   { label: 'Courts', value: '4 courts' },
 ];
 
@@ -68,7 +70,7 @@ export default function LandingHero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="font-dm text-white/75 text-lg leading-relaxed mb-4"
             >
-              A youth tennis tournament series for kids ages 8–10, giving players
+              A youth tennis tournament series for kids, giving players
               their first real competitive experience while raising funds for Aceing Autism.
             </motion.p>
 
@@ -78,7 +80,7 @@ export default function LandingHero() {
               transition={{ duration: 0.6, delay: 0.28 }}
               className="font-dm text-white/50 text-sm"
             >
-              Round robin singles · $20 entry · All proceeds donated to charity
+              18 competitors · 2 guaranteed matches · 6-game sets · All proceeds to charity
             </motion.p>
           </div>
 
@@ -95,8 +97,9 @@ export default function LandingHero() {
                 Registration Process
               </h2>
               <p className="font-dm text-gray-500 text-sm leading-relaxed mb-5">
-                Fill out the form below with your name, age, and skill level. The $20 entry
-                fee is due at check-in on the day of the tournament.
+                Fill out the form with your name, age, and skill level. Every player is
+                guaranteed 2 full matches — 6-game sets against real competition. The $20
+                entry fee is due at check-in.
               </p>
               <a
                 href={FORM_URL}

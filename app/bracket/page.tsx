@@ -92,7 +92,7 @@ export default function BracketPage() {
             TOURNAMENT BRACKET
           </h1>
           <p className="font-dm text-white/60 mt-2 text-sm">
-            Round Robin · 6 Groups of 3 · June 6, 2025
+            18 Competitors · 6 Groups of 3 · 2 Matches Per Player · 6-Game Sets · June 6, 2025
           </p>
         </div>
 

@@ -42,7 +42,7 @@ export default function AboutUs() {
           >
             Christopher began playing competitive USTA tournaments at age 10 and felt overwhelmed
             as it was his first time playing a full match, and his performance directly affected
-            his placement. This inspired him to create Aces For Youth, where kids ages 8–10 can
+            his placement. This inspired him to create Aces For Youth, where kids can
             learn how tournament-style play works in a low-pressure, welcoming environment.
           </motion.p>
 
