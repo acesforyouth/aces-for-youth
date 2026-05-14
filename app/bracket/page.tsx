@@ -11,7 +11,7 @@ const MATCHUP_PAIRS: [number, number][] = [[0, 1], [0, 2], [1, 2]];
 type Score = { a: string; b: string };
 const emptyScore = (): Score => ({ a: '', b: '' });
 const emptyGroups = (): string[][] => Array.from({ length: 6 }, () => ['', '', '']);
-const emptyScores = (): Score[][][] =>
+const emptyScores = (): Score[][] =>
   Array.from({ length: 6 }, () => Array.from({ length: MATCHUP_PAIRS.length }, () => emptyScore()));
 
 export default function BracketPage() {
@@ -20,7 +20,7 @@ export default function BracketPage() {
   const [passwordInput, setPasswordInput] = useState('');
   const [passwordError, setPasswordError] = useState(false);
   const [players, setPlayers] = useState<string[][]>(emptyGroups());
-  const [scores, setScores] = useState<Score[][][]>(emptyScores());
+  const [scores, setScores] = useState<Score[][]>(emptyScores());
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
