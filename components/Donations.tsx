@@ -76,7 +76,7 @@ export default function Donations() {
           <div>
             <p className="font-bebas text-2xl text-[#1a1a1a] tracking-wide mb-1">Ready to give back?</p>
             <p className="font-dm text-gray-400 text-sm">
-              Any amount makes a real difference in a child's life.
+              Any amount makes a real difference in a child&apos;s life.
             </p>
           </div>
           <a
