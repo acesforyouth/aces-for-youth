@@ -41,7 +41,7 @@ const pillars: Array<{ icon: ReactNode; title: string; body: string }> = [
   {
     icon: <HeartIcon />,
     title: 'Accessibility',
-    body: 'Every match raises money for Aceing Autism.',
+    body: 'Every match raises money for ACEing Autism.',
   },
 ];
 

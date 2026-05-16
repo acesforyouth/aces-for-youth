@@ -27,8 +27,8 @@ export default function CharityPartner() {
         >
           <div className="mb-5">
             <Image
-              src="/aceing-autism.png"
-              alt="Aceing Autism"
+              src="/aceing-autism-logo-blue.png"
+              alt="ACEing Autism"
               width={160}
               height={160}
               className="object-contain"
@@ -36,13 +36,13 @@ export default function CharityPartner() {
             />
           </div>
           <p className="font-dm text-gray-600 text-lg leading-relaxed mb-4">
-            Aceing Autism is a nonprofit organization that uses tennis to improve the lives of
+            ACEing Autism is a nonprofit organization that uses tennis to improve the lives of
             children with autism spectrum disorder. Through programs specifically designed for
             those with autism, they help develop motor skills, social skills, and a lifelong love
             of the sport.
           </p>
           <p className="font-dm text-gray-600 text-lg leading-relaxed mb-8">
-            100% of Aces for Youth entry fees go directly to Aceing Autism. Our goal is to raise
+            100% of Aces for Youth entry fees go directly to ACEing Autism. Our goal is to raise
             $500 per event.
           </p>
           <a
@@ -51,10 +51,10 @@ export default function CharityPartner() {
             rel="noopener noreferrer"
             className="inline-block bg-[#F4A623] text-white font-dm font-bold px-7 py-3 rounded-full hover:bg-[#e09510] transition-colors duration-200 mb-4"
           >
-            Learn About Aceing Autism →
+            Learn About ACEing Autism →
           </a>
           <p className="font-dm text-gray-400 text-xs">
-            Aces for Youth is not affiliated with Aceing Autism. All donations go directly to the
+            Aces for Youth is not affiliated with ACEing Autism. All donations go directly to the
             charity.
           </p>
         </motion.div>

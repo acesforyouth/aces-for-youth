@@ -21,7 +21,7 @@ const steps = [
   {
     number: '04',
     title: 'Give Back',
-    body: 'Entry fees go directly to Aceing Autism.',
+    body: 'Entry fees go directly to ACEing Autism.',
   },
 ];
 

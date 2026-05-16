@@ -43,7 +43,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2.5 bg-[#F4A623] text-white text-sm font-dm font-semibold px-5 py-2.5 rounded-full shadow-lg"
           >
             <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
-            Raising funds for Aceing Autism
+            Raising funds for ACEing Autism
           </motion.div>
         </motion.div>
 

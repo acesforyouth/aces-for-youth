@@ -36,7 +36,7 @@ export default function LandingHero() {
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-28 w-full">
+<div className="relative z-10 max-w-7xl mx-auto px-6 py-28 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
           {/* LEFT — Program Overview */}
@@ -49,7 +49,7 @@ export default function LandingHero() {
             >
               <span className="inline-flex items-center gap-2 bg-[#F4A623] text-white text-sm font-dm font-semibold px-4 py-2 rounded-full">
                 <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
-                Raising funds for Aceing Autism
+                Raising funds for ACEing Autism
               </span>
             </motion.div>
 
@@ -70,7 +70,7 @@ export default function LandingHero() {
               className="font-dm text-white/75 text-lg leading-relaxed mb-4"
             >
               A youth tennis tournament series for kids, giving players
-              their first real competitive experience while raising funds for Aceing Autism.
+              their first real competitive experience while raising funds for ACEing Autism.
             </motion.p>
 
             <motion.p
