@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 
-const PASSWORD = 'Aces2025';
+const PASSWORD = 'tennisMatch!';
 const GROUP_LABELS = ['A', 'B', 'C', 'D', 'E', 'F'];
 const MATCHUP_PAIRS: [number, number][] = [[0, 1], [0, 2], [1, 2]];
 
