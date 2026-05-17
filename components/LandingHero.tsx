@@ -69,8 +69,9 @@ export default function LandingHero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="font-dm text-white/75 text-lg leading-relaxed mb-4"
             >
-              A youth tennis tournament series for kids, giving players
-              their first real competitive experience while raising funds for ACEing Autism.
+              Beginner Tournament · Green Ball Level! Never played a tournament before?
+              This is the perfect place to start — a fun, low-pressure, welcoming environment
+              where the goal is to learn and enjoy the game. Come give it a try. You might love it!
             </motion.p>
 
             <motion.p

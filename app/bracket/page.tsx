@@ -134,7 +134,22 @@ export default function BracketPage() {
 
       {/* Groups */}
       <div className="max-w-6xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        {/* TBD state — remove this block when bracket is ready */}
+        {!isAdmin && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center py-24"
+          >
+            <p className="font-bebas text-6xl text-[#2D6A4F] tracking-widest mb-4">TBD</p>
+            <p className="font-dm text-gray-400 text-lg">The bracket will be announced before the tournament.</p>
+            <p className="font-dm text-gray-300 text-sm mt-2">Check back on June 6, 2025.</p>
+          </motion.div>
+        )}
+
+        {isAdmin && <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {GROUP_LABELS.map((label, gi) => (
             <motion.div
               key={label}
@@ -248,7 +263,8 @@ export default function BracketPage() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </div>}
+
       </div>
 
       {/* Password modal */}
